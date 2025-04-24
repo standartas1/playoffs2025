@@ -29,10 +29,11 @@ nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 15px; /* Adding space between buttons */
 }
 
 nav ul li {
-    margin: 10px;
+    margin: 5px; /* Adding margin around the list items */
 }
 
 nav ul li a {
@@ -81,5 +82,13 @@ footer {
 
     #image-display img {
         max-width: 90%;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stacks the buttons vertically on small screens */
+    }
+
+    nav ul li a {
+        margin-bottom: 10px; /* Adds spacing between vertically stacked buttons */
     }
 }
