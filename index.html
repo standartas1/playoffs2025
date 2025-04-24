@@ -26,6 +26,7 @@
     </nav>
 
     <section id="image-display">
+        <!-- NBA images -->
         <img id="TG" class="image" src="images/NBA_TG_resized.png" alt="TG Image" style="display: none;">
         <img id="DN" class="image" src="images/NBA_DN_resized.png" alt="DN Image" style="display: none;">
         <img id="LB" class="image" src="images/NBA_LB_resized.png" alt="LB Image" style="display: none;">
@@ -34,6 +35,16 @@
         <img id="JoS" class="image" src="images/NBA_JoS_resized.png" alt="JoS Image" style="display: none;">
         <img id="AS" class="image" src="images/NBA_AS_resized.png" alt="AS Image" style="display: none;">
         <img id="JuS" class="image" src="images/NBA_JuS_resized.png" alt="JuS Image" style="display: none;">
+
+        <!-- Euroleague images -->
+        <img id="TG_Euroleague" class="image" src="images/EUROLEAGUE_TG_resized.png" alt="TG Euroleague Image" style="display: none;">
+        <img id="DN_Euroleague" class="image" src="images/EUROLEAGUE_DN_resized.png" alt="DN Euroleague Image" style="display: none;">
+        <img id="LB_Euroleague" class="image" src="images/EUROLEAGUE_LB_resized.png" alt="LB Euroleague Image" style="display: none;">
+        <img id="MB_Euroleague" class="image" src="images/EUROLEAGUE_MB_resized.png" alt="MB Euroleague Image" style="display: none;">
+        <img id="GB_Euroleague" class="image" src="images/EUROLEAGUE_GB_resized.png" alt="GB Euroleague Image" style="display: none;">
+        <img id="JoS_Euroleague" class="image" src="images/EUROLEAGUE_JoS_resized.png" alt="JoS Euroleague Image" style="display: none;">
+        <img id="AS_Euroleague" class="image" src="" alt="AS Euroleague Image" style="display: none;">
+        <img id="JuS_Euroleague" class="image" src="images/EUROLEAGUE_JuS_resized.png" alt="JuS Euroleague Image" style="display: none;">
     </section>
 
     <footer>
@@ -48,9 +59,15 @@
                 image.style.display = 'none';
             });
             
-            // Show the selected image
+            // Show the selected image for NBA
             var selectedImage = document.getElementById(name);
             selectedImage.style.display = 'block';
+
+            // Show the selected image for Euroleague if exists
+            var euroleagueImage = document.getElementById(name + '_Euroleague');
+            if (euroleagueImage) {
+                euroleagueImage.style.display = 'block';
+            }
         }
     </script>
 </body>
