@@ -86,11 +86,12 @@ footer {
     }
 
     nav ul {
-        flex-direction: column; /* Stacks the buttons vertically on small screens */
+        flex-direction: row; /* Keep buttons in a row */
+        justify-content: center;
     }
 
     nav ul li a {
-        margin-bottom: 10px; /* Adds spacing between vertically stacked buttons */
+        margin-bottom: 10px; /* Adds spacing between buttons */
     }
 }
 
