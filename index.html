@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 PLAYOFFS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>2025 PLAYOFFS</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showImage('TG')">TG</a></li>
+            <li><a href="#" onclick="showImage('DN')">DN</a></li>
+            <li><a href="#" onclick="showImage('LB')">LB</a></li>
+            <li><a href="#" onclick="showImage('MB')">MB</a></li>
+            <li><a href="#" onclick="showImage('GB')">GB</a></li>
+            <li><a href="#" onclick="showImage('JoS')">JoS</a></li>
+            <li><a href="#" onclick="showImage('AS')">AS</a></li>
+            <li><a href="#" onclick="showImage('JuS')">JuS</a></li>
+        </ul>
+    </nav>
+
+    <section id="image-display">
+        <img id="TG" class="image" src="images/NBA_TG_resized.png" alt="TG Image" style="display: none;">
+        <img id="DN" class="image" src="images/NBA_DN_resized.png" alt="DN Image" style="display: none;">
+        <img id="LB" class="image" src="images/NBA_LB_resized.png" alt="LB Image" style="display: none;">
+        <img id="MB" class="image" src="images/NBA_MB_resized.png" alt="MB Image" style="display: none;">
+        <img id="GB" class="image" src="images/NBA_GB_resized.png" alt="GB Image" style="display: none;">
+        <img id="JoS" class="image" src="images/NBA_JoS_resized.png" alt="JoS Image" style="display: none;">
+        <img id="AS" class="image" src="images/NBA_AS_resized.png" alt="AS Image" style="display: none;">
+        <img id="JuS" class="image" src="images/NBA_JuS_resized.png" alt="JuS Image" style="display: none;">
+    </section>
+
+    <footer>
+        <p>2025 Playoffs - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showImage(name) {
+            // Hide all images
+            var images = document.querySelectorAll('.image');
+            images.forEach(function(image) {
+                image.style.display = 'none';
+            });
+            
+            // Show the selected image
+            var selectedImage = document.getElementById(name);
+            selectedImage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
