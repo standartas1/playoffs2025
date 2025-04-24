@@ -26,23 +26,28 @@
 
     <section id="image-display">
         <!-- NBA images -->
-        <img id="TG" class="image" src="NBA_TG.png" alt="TG Image" style="display: none;">
-        <img id="DN" class="image" src="NBA_DN.png" alt="DN Image" style="display: none;">
-        <img id="LB" class="image" src="NBA_LB.png" alt="LB Image" style="display: none;">
-        <img id="MB" class="image" src="NBA_MB.png" alt="MB Image" style="display: none;">
-        <img id="GB" class="image" src="NBA_GB.png" alt="GB Image" style="display: none;">
-        <img id="JoS" class="image" src="NBA_JoS.png" alt="JoS Image" style="display: none;">
-        <img id="AS" class="image" src="NBA_AS.png" alt="AS Image" style="display: none;">
-        <img id="JuS" class="image" src="NBA_JuS.png" alt="JuS Image" style="display: none;">
+        <img id="TG" class="image" src="NBA_TG.png" alt="TG Image" onclick="expandImage(this)" style="display: none;">
+        <img id="DN" class="image" src="NBA_DN.png" alt="DN Image" onclick="expandImage(this)" style="display: none;">
+        <img id="LB" class="image" src="NBA_LB.png" alt="LB Image" onclick="expandImage(this)" style="display: none;">
+        <img id="MB" class="image" src="NBA_MB.png" alt="MB Image" onclick="expandImage(this)" style="display: none;">
+        <img id="GB" class="image" src="NBA_GB.png" alt="GB Image" onclick="expandImage(this)" style="display: none;">
+        <img id="JoS" class="image" src="NBA_JoS.png" alt="JoS Image" onclick="expandImage(this)" style="display: none;">
+        <img id="AS" class="image" src="NBA_AS.png" alt="AS Image" onclick="expandImage(this)" style="display: none;">
+        <img id="JuS" class="image" src="NBA_JuS.png" alt="JuS Image" onclick="expandImage(this)" style="display: none;">
 
         <!-- Euroleague images -->
-        <img id="TG_Euroleague" class="image" src="EUROLEAGUE_TG.png" alt="TG Euroleague Image" style="display: none;">
-        <img id="DN_Euroleague" class="image" src="EUROLEAGUE_DN.png" alt="DN Euroleague Image" style="display: none;">
-        <img id="LB_Euroleague" class="image" src="EUROLEAGUE_LB.png" alt="LB Euroleague Image" style="display: none;">
-        <img id="MB_Euroleague" class="image" src="EUROLEAGUE_MB.png" alt="MB Euroleague Image" style="display: none;">
-        <img id="GB_Euroleague" class="image" src="EUROLEAGUE_GB.png" alt="GB Euroleague Image" style="display: none;">
-        <img id="JuS_Euroleague" class="image" src="EUROLEAGUE_JuS.png" alt="JuS Euroleague Image" style="display: none;">
+        <img id="TG_Euroleague" class="image" src="EUROLEAGUE_TG.png" alt="TG Euroleague Image" onclick="expandImage(this)" style="display: none;">
+        <img id="DN_Euroleague" class="image" src="EUROLEAGUE_DN.png" alt="DN Euroleague Image" onclick="expandImage(this)" style="display: none;">
+        <img id="LB_Euroleague" class="image" src="EUROLEAGUE_LB.png" alt="LB Euroleague Image" onclick="expandImage(this)" style="display: none;">
+        <img id="MB_Euroleague" class="image" src="EUROLEAGUE_MB.png" alt="MB Euroleague Image" onclick="expandImage(this)" style="display: none;">
+        <img id="GB_Euroleague" class="image" src="EUROLEAGUE_GB.png" alt="GB Euroleague Image" onclick="expandImage(this)" style="display: none;">
+        <img id="JuS_Euroleague" class="image" src="EUROLEAGUE_JuS.png" alt="JuS Euroleague Image" onclick="expandImage(this)" style="display: none;">
     </section>
+
+    <div id="lightbox" style="display: none;">
+        <span id="close" onclick="closeLightbox()">X</span>
+        <img id="lightbox-img" src="" alt="Expanded Image">
+    </div>
 
     <footer>
         <p>2025 Playoffs - All Rights Reserved</p>
@@ -65,6 +70,18 @@
             if (euroleagueImage) {
                 euroleagueImage.style.display = 'block';
             }
+        }
+
+        function expandImage(image) {
+            var lightbox = document.getElementById('lightbox');
+            var lightboxImg = document.getElementById('lightbox-img');
+            lightboxImg.src = image.src;
+            lightbox.style.display = 'block';
+        }
+
+        function closeLightbox() {
+            var lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
         }
     </script>
 </body>
